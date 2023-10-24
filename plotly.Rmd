@@ -60,6 +60,18 @@ nyc_airbnb |>
           type = "bar", colors = "viridis")
 ```
 
+## ggplotly
+
+ggplot scatterplot - do not use
+
+```{r, eval = F}
+ggp_scatterplot = 
+  nyc_airbnb |> 
+  ggplot(aes(x = lat, y = long, color = price)) +
+  geom_point(alpha = 0.5)
+
+ggplotly(ggp_scatterplot)
+```
 
 
 
